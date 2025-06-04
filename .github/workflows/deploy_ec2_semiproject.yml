@@ -4,7 +4,7 @@ on:
   workflow_dispatch
 
 env:
-  DOCKER_USERNAME: jisoo-dev
+  DOCKER_USERNAME: cj001j
   IMAGE_NAME: semiproject
   IMAGE_TAG: v${{ github.run_number }}
   HOSTNAME: 13.125.218.128
@@ -89,7 +89,7 @@ jobs:
           port: 22
           script: |
             docker compose -f ./compose-semiproject.yaml down  
-            docker image rm -f siestageek/semiproject
+            docker image rm -f cj001j/semiproject
             docker compose -f ./compose-semiproject.yaml up -d
             sleep 15
             
