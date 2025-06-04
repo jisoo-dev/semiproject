@@ -71,7 +71,7 @@ jobs:
           username: ${{ env.USERNAME }}
           key: ${{ secrets.EC2_PRIVATEKEY }}
           port: 22
-          source: "compose-semiproject.yaml"
+          source: "./compose-semiproject.yaml"
           target: "/home/${{ env.USERNAME }}"
 
 
