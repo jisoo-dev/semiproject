@@ -88,9 +88,9 @@ jobs:
           key: ${{ secrets.EC2_PRIVATEKEY }}
           port: 22
           script: |
-            docker compose -f ./compose-semiproject.yaml down  
+            docker compose -f ./compose-semiproject.yml down  
             docker image rm -f cj001j/semiproject
-            docker compose -f ./compose-semiproject.yaml up -d
+            docker compose -f ./compose-semiproject.yml up -d
             sleep 15
             
             docker compose -f ./compose-semiproject.yaml ps
